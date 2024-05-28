@@ -1,0 +1,81 @@
+[
+    {
+        "name": "Allow Traffic from Host 1 to Host 2",
+        "src_ip": "10.0.0.1",
+        "dst_ip": "10.0.0.2",
+        "action": "allow"
+    },
+    {
+        "name": "Block Traffic from Host 3 to Host 4",
+        "src_ip": "10.0.0.3",
+        "dst_ip": "10.0.0.4",
+        "action": "drop"
+    },
+    {
+        "name": "Allow Traffic from Host 5 to Host 6",
+        "src_ip": "10.0.0.5",
+        "dst_ip": "10.0.0.6",
+        "action": "allow"
+    },
+    {
+        "name": "Block Traffic from Host 7 to Host 8",
+        "src_ip": "10.0.0.7",
+        "dst_ip": "10.0.0.8",
+        "action": "drop"
+    },
+    {
+        "name": "Deny TCP Traffic to a Specific Port",
+        "protocol": "tcp",
+        "dst_ip": "10.0.0.9",
+        "dst_port": 80,
+        "action": "drop"
+    },
+    {
+        "name": "Deny UDP Traffic",
+        "protocol": "udp",
+        "action": "drop"
+    },
+    {
+        "name": "Allow ICMP Traffic",
+        "protocol": "icmp",
+        "action": "allow"
+    },
+    {
+        "name": "Allow IGMP Traffic",
+        "protocol": "igmp",
+        "action": "allow"
+    },
+    {
+        "name": "Allow RAW Traffic",
+        "protocol": "raw",
+        "action": "allow"
+    },
+    {
+        "name": "Allow Established and Related Traffic",
+        "action": "allow",
+        "state": "established,related"
+    },
+    {
+        "name": "Block Invalid Traffic",
+        "action": "drop",
+        "state": "invalid"
+    },
+    {
+        "name": "Allow DNS Queries",
+        "protocol": "udp",
+        "dst_ip": "10.0.0.9",
+        "dst_port": 53,
+        "action": "allow"
+    },
+    {
+        "name": "Allow NTP Traffic",
+        "protocol": "udp",
+        "dst_ip": "10.0.0.9",
+        "dst_port": 123,
+        "action": "allow"
+    },
+    {
+        "name": "Block All Other Incoming Traffic",
+        "action": "drop"
+    }
+]
